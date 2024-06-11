@@ -41,8 +41,8 @@
             <tbody class="table-group-divider">
                 <?php
                 if (isset($_SESSION['myCart'])) {
-                    foreach ($_SESSION['myCart'] as $pro) {
-                        ?>
+                    foreach ($_SESSION['myCart'] as $pro) : ?>
+                        
                             <tr>
                                 <th scope="row" style="width: 50%;">
                                     <input type="checkbox" class="me-2">
@@ -81,10 +81,7 @@
                             </tr>
         
         
-                        <?php
-                        }
-                }
-                ?>
+                            <?php endforeach; } ?>
             </tbody>
         </table>
        

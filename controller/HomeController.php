@@ -32,7 +32,7 @@
         
         public function cart() {
             // Gọi modle lấy danh sách sp
-            $_SESSION['myCart'];
+            // $_SESSION['myCart'] = [];
             
             $danhSachDm = $this -> categoryQuery -> all();
 
@@ -52,16 +52,11 @@
                     'pro_quantity'=> $product->pro_quantity,
                     'total'=> $total,
                 ];
-
-                array_push($_SESSION['myCart'],$array_pro);
+                array_push($_SESSION["myCart"],$array_pro);
                 // echo "<pre>";
                 // print_r($_SESSION['myCart']);
-
             
             }
-            // Hiển thị view giỏ hàng
-           
-    
 
             include "view/cart.php";
         

@@ -30,7 +30,11 @@
     // Thông tin act
     $act = $_GET['act'] ?? '' ;
     $id = $_GET['id']  ?? '';
+    //  $_SESSION['myCart'] ;
     // 
+    if(!isset($_SESSION["myCart"])) {
+      $_SESSION["myCart"] = [];
+    }
 
     match ($act) {
         '' => (new HomeController())->home(),
